@@ -8,9 +8,9 @@
 #include "SeamCarver.h"
 
 int main() {
-//	Mat_<Vec3b> image = imread("/home/karthik/workspace/openCV/surfing.png");
-//	Mat_<Vec3b> image = imread("/home/karthik/workspace/openCV/pic2.png");
-	Mat_<Vec3b> image = imread("/home/karthik/workspace/openCV/stuff.jpg");
+//	Mat_<Vec3b> image = imread("surfing.png");
+//	Mat_<Vec3b> image = imread("pic2.png");
+	Mat_<Vec3b> image = imread("stuff.jpg");
 	if (!image.data) {
 		cout << "Invalid input";
 		return -1;
