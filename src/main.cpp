@@ -24,7 +24,7 @@ int main() {
 //		s.showHorizontalSeam(seam);
 		s.removeHorizontalSeam(seam);
 	}
-	for (int i = 0; i < 300; ++i) {
+	for (int i = 0; i < 250; ++i) {
 		vector<uint> seam = s.findVerticalSeam();
 //		s.showVerticalSeam(seam);
 		s.removeVerticalSeam(seam);
