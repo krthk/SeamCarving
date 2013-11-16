@@ -14,6 +14,7 @@ void SeamCarver::showVerticalSeam(vector<uint> seam) {
 	for (int i = 0; i < tmp.rows; ++i)
 		tmp.at<Vec3b>(i, seam[i]) = Vec3b(0, 0, 255);	//Set the color of the seam to Red
 	imshow("Seam", tmp);
+	imwrite("bench_with_seam.jpg", tmp);
 }
 
 void SeamCarver::showHorizontalSeam(vector<uint> seam) {

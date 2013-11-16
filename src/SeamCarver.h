@@ -17,7 +17,6 @@ using namespace std;
 
 class SeamCarver {
 	Mat_<Vec3b> image;
-	Mat energy;
 
 	//Compute the full energy matrix by scanning the whole image
 	void computeFullEnergy();
@@ -26,6 +25,7 @@ class SeamCarver {
 	void computeEnergyAfterSeamRemoval(vector<uint> seam);
 
 public:
+	Mat energy;
 	SeamCarver(Mat_<Vec3b> im) {
 		image = im;
 		energy = Mat(image.rows, image.cols, CV_32S, Scalar(195075));
