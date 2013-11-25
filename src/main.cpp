@@ -10,9 +10,9 @@
 int main() {
 //	Mat_<Vec3b> image = imread("surfing.png");
 //	Mat_<Vec3b> image = imread("pic2.png");
-//	Mat_<Vec3b> image = imread("stuff.jpg");
+	Mat_<Vec3b> image = imread("stuff.jpg");
 //	Mat_<Vec3b> image = imread("lighthouse.jpg");
-	Mat_<Vec3b> image = imread("bench.jpg");
+//	Mat_<Vec3b> image = imread("bench.jpg");
 	if (!image.data) {
 		cout << "Invalid input";
 		return -1;
@@ -27,11 +27,11 @@ int main() {
 //	vector<uint> sm = s.findVerticalSeam();
 //	s.showVerticalSeam(sm);
 
-//	for (int i = 0; i < 160; ++i) {
-//		vector<uint> seam = s.findHorizontalSeam();
-////		s.showHorizontalSeam(seam);
-//		s.removeHorizontalSeam(seam);
-//	}
+	for (int i = 0; i < 160; ++i) {
+		vector<uint> seam = s.findHorizontalSeam();
+//		s.showHorizontalSeam(seam);
+		s.removeHorizontalSeam(seam);
+	}
 	for (int i = 0; i < 150; ++i) {
 		vector<uint> seam = s.findVerticalSeam();
 //		s.showVerticalSeam(seam);
