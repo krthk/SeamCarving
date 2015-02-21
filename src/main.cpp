@@ -15,6 +15,7 @@ int main() {
 //	Mat_<Vec3b> image = imread("bench.jpg");
 	if (!image.data) {
 		cout << "Invalid input";
+		image.release();
 		return -1;
 	}
 
@@ -53,6 +54,7 @@ int main() {
 //		}
 //		cout << endl;
 //	}
+	image.release();
 	return 0;
 }
 
