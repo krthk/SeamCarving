@@ -113,7 +113,10 @@ vector<uint> SeamCarver::findVerticalSeam() {
 	//Find the bottom of the min-path
 	unsigned int min_index = 0, min = distTo[image.rows-1][0];
 	for (int i = 1; i < image.cols; ++i)
-		if (distTo[image.rows-1][i] < min) min_index = i;
+		if (distTo[image.rows-1][i] < min) {
+			min_index = i;
+			min = distTo[image.rows-1][i];
+		}
 
 	//Retrace the min-path and update the 'seam' vector
 	seam[image.rows-1] = min_index;

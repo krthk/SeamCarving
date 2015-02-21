@@ -9,7 +9,6 @@
 #ifndef SEAMCARVER_H_
 #define SEAMCARVER_H_
 
-#include <opencv.hpp>
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
